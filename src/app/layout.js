@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import SmoothScrollProvider from "@/providers/SmoothScrollProvider";
 import Header from "@/components/shared/Header";
+import Footer from "@/components/shared/Footer";
 
 
 const geistSans = Geist({
@@ -37,7 +38,7 @@ export default function RootLayout({ children }) {
           <main className="flex-grow">
             {children}
           </main>
-          
+          <Footer></Footer>
        
           
         </SmoothScrollProvider>
