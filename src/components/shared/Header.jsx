@@ -32,7 +32,7 @@ export default function Header() {
   // ক্লায়েন্টের ওয়েবসাইটের হুবহু মেনু ডাটা
   const menuItems = [
     { label: "HOME", href: "/" },
-    { label: "VIDEO PRODUCTION COMPANY IN CHARLOTTE NC", href: "#" },
+    { label: "VIDEO PRODUCTION COMPANY IN CHARLOTTE NC", href: "video-production-company-charlotte-nc" },
     {
       label: "OUR SERVICES",
       href: "#",
