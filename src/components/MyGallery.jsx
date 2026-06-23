@@ -5,9 +5,7 @@ import Image from "next/image";
 import { FiX, FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 export default function MyGallery() {
-const images = [
-   
-   
+  const images = [
     "https://finalcutmultimedia.com/wp-content/uploads/2025/10/496857656_2510228855980777_2259413147144370187_n.jpg",
     "https://finalcutmultimedia.com/wp-content/uploads/2025/10/496844314_2510228925980770_7814908319192677181_n.jpg",
     "https://finalcutmultimedia.com/wp-content/uploads/2025/10/C8120B90-0EBC-4602-98A8-4E7300316DA5-scaled.jpeg",
@@ -35,11 +33,10 @@ const images = [
     "https://finalcutmultimedia.com/wp-content/uploads/2025/10/openart-image_7HLeygA4_1757381102747_raw.jpg",
     "https://finalcutmultimedia.com/wp-content/uploads/2025/10/openart-image_8xbdXJr1_1759437901847_raw.jpg",
     "https://finalcutmultimedia.com/wp-content/uploads/2025/10/openart-image_TqnE_k4M_1757437194190_raw.jpg",
-   
-   
   ];
 
   const [currentIndex, setCurrentIndex] = useState(null);
+  const [visibleCount, setVisibleCount] = useState(12); // শুরুতে ১২টি ছবি দেখাবে
 
   const nextImg = (e) => {
     e.stopPropagation();
@@ -51,17 +48,21 @@ const images = [
     setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
   };
 
+  const loadMore = () => {
+    setVisibleCount(images.length); // সব ছবি দেখাবে
+  };
+
   return (
     <section className="bg-[#0A0A0A] py-[10vh] px-[5vw]">
       {/* হেডার */}
       <div className="text-center mb-[8vh]">
         <h2 className="text-white text-[8vw] md:text-[3vw] font-black uppercase tracking-widest mb-2">My Gallery</h2>
-        <p className="text-gray-400 text-[3.5vw] md:text-[1vw] uppercase tracking-[0.2em]">Capturing life moments through my lens</p>
+        <p className="text-gray-400 text-[3.5vw] md:text-[1vw] uppercase tracking-[0.2em]">Capturing life is moments through my lens</p>
       </div>
 
       {/* গ্যালারি গ্রিড */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[2vw]">
-        {images.map((src, index) => (
+        {images.slice(0, visibleCount).map((src, index) => (
           <div 
             key={index} 
             className="relative w-full h-[400px] overflow-hidden cursor-pointer group border border-white/10"
@@ -78,6 +79,18 @@ const images = [
           </div>
         ))}
       </div>
+
+      {/* Load More বাটন */}
+      {visibleCount < images.length && (
+        <div className="flex justify-center mt-[8vh]">
+          <button 
+            onClick={loadMore}
+            className="bg-red-600 text-white px-[6vw] py-[2vh] md:px-[3vw] md:py-[1.5vh] font-bold text-[3.5vw] md:text-[1vw] uppercase tracking-widest hover:bg-red-700 transition-colors shadow-lg hover:shadow-red-600/30"
+          >
+            LOAD MORE
+          </button>
+        </div>
+      )}
 
       {/* Lightbox Modal */}
       {currentIndex !== null && (
