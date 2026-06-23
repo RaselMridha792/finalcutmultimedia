@@ -35,7 +35,7 @@ export default function Header() {
     { label: "VIDEO PRODUCTION COMPANY IN CHARLOTTE NC", href: "video-production-company-charlotte-nc" },
     {
       label: "OUR SERVICES",
-      href: "/",
+      href: "/our-services",
       subMenuItems: [
         { label: "Drone Video Production in Charlotte, NC", href: "#" },
         { label: "Photography", href: "#" },

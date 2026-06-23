@@ -25,7 +25,7 @@ export default function NotFound() {
 
         {/* ডেসক্রিপশন */}
         <p className="text-gray-400 text-[4vw] md:text-[1.1vw] max-w-[80vw] md:max-w-2xl leading-relaxed mb-[6vh]">
-          Looks like the page you are looking for ended up on the cutting room floor. Don't worry, let's get you back to the main feature.
+          Looks like the page you are looking for ended up on the cutting room floor. Do not worry, let is get you back to the main feature.
         </p>
 
         {/* হোম বাটন */}
