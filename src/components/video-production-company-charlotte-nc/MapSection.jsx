@@ -32,7 +32,7 @@ export default function MapSection() {
           </div>
         </div>
 
-        {/* ডান পাশ: গুগল ম্যাপ (কোনো ওভারলে বা ফিল্টার ছাড়া) */}
+    
         <div className="w-full h-[50vh] md:h-[60vh] border-[0.2vw] border-white/10 overflow-hidden relative">
           <iframe 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d208225.8601550993!2d-80.99312353120611!3d35.20311796590214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8856a319d640b64d%3A0x701b97950c05763!2sCharlotte%2C%20NC%2C%20USA!5e0!3m2!1sen!2sbd!4v1719062328000!5m2!1sen!2sbd" 
