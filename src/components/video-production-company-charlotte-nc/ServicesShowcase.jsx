@@ -38,12 +38,12 @@ export default function ServicesShowcase() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-[2vw]">
           {whyChooseUs.map((item, index) => (
-            <div key={index} className="bg-white p-[3vw] flex flex-col justify-between group">
+            <div key={index} className="bg-[#3d3d3d] p-[3vw] flex flex-col justify-between group shadow-lg border border-white/5 transition-all duration-300">
               <div className="mb-[4vh]">
-                <h3 className="text-black text-[4.5vw] md:text-[1.2vw] font-bold uppercase mb-[2vh]">{item.title}</h3>
-                <p className="text-gray-700 text-[3.5vw] md:text-[0.9vw] leading-relaxed">{item.desc}</p>
+                <h3 className="text-white text-[4.5vw] md:text-[1.2vw] font-bold uppercase mb-[2vh]">{item.title}</h3>
+                <p className="text-gray-400 text-[3.5vw] md:text-[0.9vw] leading-relaxed">{item.desc}</p>
               </div>
-              <Link href="#" className="w-full bg-black text-white text-center py-[2vh] font-bold text-[3vw] md:text-[0.9vw] uppercase tracking-widest hover:bg-red-600 transition-colors">
+              <Link href="#" className="w-full bg-black text-white text-center py-[2vh] font-bold text-[3vw] md:text-[0.9vw] uppercase tracking-widest hover:bg-red-600 transition-colors border border-white/10">
                 READ MORE
               </Link>
             </div>
@@ -58,12 +58,12 @@ export default function ServicesShowcase() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[2vw]">
           {droneServices.map((item, index) => (
-            <div key={index} className="bg-white p-[3vw] flex flex-col justify-between group">
+            <div key={index} className="bg-[#3d3d3d] p-[3vw] flex flex-col justify-between group shadow-lg border border-white/5 transition-all duration-300">
               <div className="mb-[4vh]">
-                <h3 className="text-black text-[4.5vw] md:text-[1.2vw] font-bold uppercase mb-[2vh]">{item.title}</h3>
-                <p className="text-gray-700 text-[3.5vw] md:text-[0.9vw] leading-relaxed">{item.desc}</p>
+                <h3 className="text-white text-[4.5vw] md:text-[1.2vw] font-bold uppercase mb-[2vh]">{item.title}</h3>
+                <p className="text-gray-400 text-[3.5vw] md:text-[0.9vw] leading-relaxed">{item.desc}</p>
               </div>
-              <Link href="#" className="w-full bg-black text-white text-center py-[2vh] font-bold text-[3vw] md:text-[0.9vw] uppercase tracking-widest hover:bg-red-600 transition-colors">
+              <Link href="#" className="w-full bg-black text-white text-center py-[2vh] font-bold text-[3vw] md:text-[0.9vw] uppercase tracking-widest hover:bg-red-600 transition-colors border border-white/10">
                 READ MORE
               </Link>
             </div>
