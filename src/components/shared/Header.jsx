@@ -38,7 +38,7 @@ export default function Header() {
       href: "/our-services",
       subMenuItems: [
         { label: "Drone Video Production in Charlotte, NC", href: "our-services/drone-video-production-in-charlotte-nc" },
-        { label: "Photography", href: "#" },
+        { label: "Photography", href: "/our-services/photography-services-charlotte-nc" },
         { label: "Event photography & Video", href: "#" },
         { label: "Headshot Photography", href: "#" },
         { label: "Video Production", href: "#" },
@@ -110,7 +110,7 @@ export default function Header() {
               <div key={index} className="relative group py-4">
                 <Link
                   href={item.href}
-                  className="text-white/90 text-[10px] 2xl:text-[11px] font-medium tracking-widest uppercase flex items-center gap-1 transition-colors duration-300 hover:text-[#D4AF37]"
+                  className="text-white/90 text-[10px] 2xl:text-[11px] font-medium tracking-widest uppercase flex items-center gap-1 transition-colors duration-300 hover:text-red-600"
                 >
                   {item.label}
                   {item.subMenuItems && (
@@ -130,13 +130,13 @@ export default function Header() {
                   >
                     <div className="bg-[#0f0f0f] relative pl-6 pr-8 py-6 flex flex-col gap-5 min-w-[280px]">
                       {/* সোনালী বর্ডার লাইন */}
-                      <div className="absolute left-6 top-6 bottom-6 w-[2px] bg-[#D4AF37]"></div>
+                      <div className="absolute left-6 top-6 bottom-6 w-[2px] bg-red-600"></div>
                       
                       {item.subMenuItems.map((subItem, subIndex) => (
                         <Link
                           key={subIndex}
                           href={subItem.href}
-                          className="text-white/90 text-[11px] font-medium tracking-widest uppercase hover:text-[#D4AF37] pl-4 transition-colors duration-300"
+                          className="text-white/90 text-[11px] font-medium tracking-widest uppercase hover:text-red-600 pl-4 transition-colors duration-300"
                         >
                           {subItem.label}
                         </Link>
@@ -151,7 +151,7 @@ export default function Header() {
           {/* মোবাইল মেনু বাটন */}
           <button 
             onClick={() => setIsMobileMenuOpen(true)}
-            className="xl:hidden text-white flex items-center gap-2 hover:text-[#D4AF37] transition-colors"
+            className="xl:hidden text-white flex items-center gap-2 hover:text-red-600 transition-colors"
           >
             <span className="text-xs font-semibold tracking-widest uppercase">Menu</span>
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -170,7 +170,7 @@ export default function Header() {
       >
         <button 
           onClick={() => setIsMobileMenuOpen(false)}
-          className="absolute top-6 right-6 text-white flex items-center gap-2 hover:text-[#D4AF37]"
+          className="absolute top-6 right-6 text-white flex items-center gap-2 hover:text-red-600"
         >
           <span className="text-xs font-semibold tracking-widest uppercase">Close</span>
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
