@@ -13,6 +13,7 @@ export default function page() {
         <DroneServiceHero></DroneServiceHero>
         <DroneDetails></DroneDetails>
         <DroneContent></DroneContent>
+        
         <DroneUseCases></DroneUseCases>
         <MyGallery></MyGallery>
         <DroneRequestForm></DroneRequestForm>
