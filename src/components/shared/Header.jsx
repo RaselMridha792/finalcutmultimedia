@@ -66,7 +66,7 @@ export default function Header() {
     { label: "CONTACT US", href: "/contact" },
     {
       label: "ABOUT US",
-      href: "#",
+      href: "/about-us",
       subMenuItems: [
         { label: "FAQs", href: "#" },
         { label: "Privacy Policy", href: "#" },
