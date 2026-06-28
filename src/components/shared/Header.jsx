@@ -8,7 +8,6 @@ export default function Header() {
   const [scrollY, setScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // স্ক্রল পজিশন ট্র্যাক
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
@@ -18,7 +17,6 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // ডাইনামিক হেডার ক্লাস লজিক
   const getHeaderClasses = () => {
     if (scrollY <= 150) {
       return "absolute top-0 left-0 py-6 bg-transparent";
@@ -65,7 +63,7 @@ export default function Header() {
       ],
     },
     { label: "BLOGS", href: "#" },
-    { label: "CONTACT US", href: "#" },
+    { label: "CONTACT US", href: "/contact" },
     {
       label: "ABOUT US",
       href: "#",
