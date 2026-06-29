@@ -40,6 +40,7 @@ export default function Header() {
         { label: "Event Coverage Page", href: "/our-services/event-coverage-page" },
         { label: "Video Editing", href: "/our-services/video-editing" },
         { label: "Monthly Content Creation", href: "/our-services/monthly-content-creation" },
+        { label: "Additional Production Services", href: "/our-services/additional-production-services" },
         { label: "Event photography & Video", href: "#" },
         { label: "Headshot Photography", href: "#" },
         { label: "Video Production", href: "#" },
