@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} antialiased`}
     >
-      <body className="bg-dark-bg text-white min-h-screen flex flex-col">
+      <body suppressHydrationWarning className="bg-dark-bg text-white min-h-screen flex flex-col">
         {/* পুরো অ্যাপকে স্মুথ স্ক্রলিংয়ের আওতায় আনা হলো */}
         <SmoothScrollProvider>
           
