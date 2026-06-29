@@ -39,6 +39,7 @@ export default function Header() {
         { label: "Photography", href: "/our-services/photography-services-charlotte-nc" },
         { label: "Event Coverage Page", href: "/our-services/event-coverage-page" },
         { label: "Video Editing", href: "/our-services/video-editing" },
+        { label: "Monthly Content Creation", href: "/our-services/monthly-content-creation" },
         { label: "Event photography & Video", href: "#" },
         { label: "Headshot Photography", href: "#" },
         { label: "Video Production", href: "#" },
