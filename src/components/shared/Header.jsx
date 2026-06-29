@@ -38,6 +38,7 @@ export default function Header() {
         { label: "Drone Video Production in Charlotte, NC", href: "our-services/drone-video-production-in-charlotte-nc" },
         { label: "Photography", href: "/our-services/photography-services-charlotte-nc" },
         { label: "Event Coverage Page", href: "/our-services/event-coverage-page" },
+        { label: "Video Editing", href: "/our-services/video-editing" },
         { label: "Event photography & Video", href: "#" },
         { label: "Headshot Photography", href: "#" },
         { label: "Video Production", href: "#" },
