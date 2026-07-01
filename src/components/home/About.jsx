@@ -45,7 +45,7 @@ export default function AboutSection() {
 
           {/* Learn More বাটন */}
           <Link 
-            href="/about" 
+            href="/about-us" 
             className="inline-flex items-center justify-center mt-[6vh] 
                        w-[50vw] sm:w-[30vw] md:w-[22vw] lg:w-[16vw] xl:w-[14vw]
                        h-[7vh] md:h-[6vh]
@@ -58,13 +58,12 @@ export default function AboutSection() {
       </div>
 
       {/* ডান পাশ: ক্লায়েন্টের ছবি */}
-      <div className="relative w-full lg:w-1/2 h-[50vh] lg:h-auto lg:min-h-screen bg-black/5"> 
-        {/* bg-black/5 দেওয়া হয়েছে যাতে ইমেজ ছোট হলে ব্যাকগ্রাউন্ড খালি না লাগে */}
+      <div className="relative w-full lg:w-[45%] xl:w-[42%] h-[60vh] lg:h-auto lg:min-h-screen bg-black/5">
         <Image
           src="https://res.cloudinary.com/dsga4gyw9/image/upload/v1781697016/Use_this_picture_k9euqa.jpg"
           alt="Final Cut Multimedia Team"
           fill
-          className="object-contain object-center"
+          className="object-cover object-center"
           priority
           unoptimized
         />

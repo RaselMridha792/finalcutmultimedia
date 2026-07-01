@@ -6,9 +6,9 @@ import Link from "next/link";
 export default function Footer() {
   const usefulPages = [
     { name: "HOME", url: "/" },
-    { name: "ABOUT US", url: "#" },
+    { name: "VIDEO PRODUCTION AGENCY", url: "/video-production-company-charlotte-nc" },
+    { name: "ABOUT US", url: "/about-us" },
     { name: "FAQ'S", url: "#" },
-    { name: "SERVICES", url: "#" },
     { name: "BLOGS", url: "#" },
   ];
 
@@ -56,22 +56,22 @@ export default function Footer() {
               />
             </div>
             <h3 className="text-white text-[4.5vw] md:text-[1.2vw] font-bold uppercase tracking-widest mb-[3vh]">
-              ABOUT COMPANY
+              ABOUT AGENCY
             </h3>
             <p className="text-gray-400 text-[3.5vw] md:text-[0.9vw] leading-relaxed">
-              Final Cut Multimedia is a creative production company specializing in video, photography, and digital content. We capture stories that inspire, events that matter, and visuals that connect. Our mission: transforming ideas into impactful content that lasts.
+              Final Cut Multimedia is a Charlotte-based video production agency specializing in video, photography, and digital content. We create stories that inspire, events that matter, and visuals that connect. Our mission is to turn ideas into impactful content that lasts.
             </p>
           </div>
 
           {/* কলাম ২: Useful Pages */}
           <div className="flex flex-col">
             <h3 className="text-white text-[4.5vw] md:text-[1.2vw] font-bold uppercase tracking-widest mb-[3vh]">
-              USEFUL PAGES
+              QUICK LINKS
             </h3>
             <ul className="flex flex-col gap-[2vh]">
               {usefulPages.map((page, index) => (
                 <li key={index}>
-                  <Link href={page.url} className="text-gray-400 text-[3.5vw] md:text-[0.9vw] font-medium tracking-wider hover:text-[#D4AF37] transition-colors uppercase">
+                  <Link href={page.url} className="text-gray-400 text-[3.5vw] md:text-[0.9vw] font-medium tracking-wider hover:text-red-600 transition-colors uppercase">
                     {page.name}
                   </Link>
                 </li>
@@ -87,7 +87,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-[2vh]">
               {services.map((service, index) => (
                 <li key={index}>
-                  <Link href={service.url} className="text-gray-400 text-[3.5vw] md:text-[0.9vw] font-medium tracking-wider hover:text-[#D4AF37] transition-colors uppercase">
+                  <Link href={service.url} className="text-gray-400 text-[3.5vw] md:text-[0.9vw] font-medium tracking-wider hover:text-red-600 transition-colors uppercase">
                     {service.name}
                   </Link>
                 </li>
@@ -98,20 +98,20 @@ export default function Footer() {
           {/* কলাম ৪: Contact Me & Privacy */}
           <div className="flex flex-col">
             <h3 className="text-white text-[4.5vw] md:text-[1.2vw] font-bold uppercase tracking-widest mb-[3vh]">
-              CONTACT ME
+              CONTACT US
             </h3>
             <div className="flex flex-col gap-[2vh] mb-[4vh]">
-              <a href="mailto:info@finalcutmultimedia.com" className="flex items-center gap-[1vw] text-gray-400 text-[3.5vw] md:text-[0.9vw] hover:text-[#D4AF37] transition-colors">
+              <a href="mailto:info@finalcutmultimedia.com" className="flex items-center gap-[1vw] text-gray-400 text-[3.5vw] md:text-[0.9vw] hover:text-red-600 transition-colors">
                 <svg className="w-[4vw] h-[4vw] md:w-[1.2vw] md:h-[1.2vw]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                 info@finalcutmultimedia.com
               </a>
-              <a href="tel:+7044911283" className="flex items-center gap-[1vw] text-gray-400 text-[3.5vw] md:text-[0.9vw] hover:text-[#D4AF37] transition-colors">
+              <a href="tel:+7044911283" className="flex items-center gap-[1vw] text-gray-400 text-[3.5vw] md:text-[0.9vw] hover:text-red-600 transition-colors">
                 <svg className="w-[4vw] h-[4vw] md:w-[1.2vw] md:h-[1.2vw]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                 +704 491 1283
               </a>
             </div>
             
-            <Link href="#" className="text-white text-[4vw] md:text-[1.1vw] font-bold hover:text-[#D4AF37] transition-colors">
+            <Link href="#" className="text-white text-[4vw] md:text-[1.1vw] font-bold hover:text-red-600 transition-colors">
               Privacy Policy
             </Link>
           </div>

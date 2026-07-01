@@ -40,18 +40,34 @@ export default function ServicesGrid() {
     },
     {
       id: 5,
-      // ক্লায়েন্টের নির্দেশ অনুযায়ী ৫ নম্বর সার্ভিস আপডেট করা হয়েছে
       subtitle: "MEMORABLE",
       title: "EVENT COVERAGE",
       desc: "High-quality video and photo coverage for corporate events, conferences, and live shows.",
       image: "https://finalcutmultimedia.com/wp-content/uploads/2025/10/IMG_2841-scaled.jpeg",
       link: "#",
     },
+    {
+      id: 6,
+      subtitle: "VERSATILE",
+      title: "ADDITIONAL PRODUCTION SERVICES",
+      desc: "Headshots, live streaming, training content, and documentary-style productions under one creative team.",
+      image: "https://finalcutmultimedia.com/wp-content/uploads/2025/10/IMG_2841-1-1-scaled.jpeg",
+      link: "/our-services/additional-production-services",
+    },
   ];
 
-  // ৩. নতুন ইন্ডাস্ট্রি লিস্ট
   const industries = [
-    "Real Estate", "Automotive", "Corporate", "Healthcare", "Education", "Entertainment", "E-commerce", "Hospitality"
+    "Automotive", "Corporate", "Healthcare", "Education", "Entertainment", "E-commerce", "Hospitality"
+  ];
+
+  const areas = [
+    "Charlotte, NC",
+    "Gastonia, NC",
+    "Kannapolis, NC",
+    "Concord, NC",
+    "Huntersville, NC",
+    "Mooresville, NC",
+    "Rock Hill, SC",
   ];
 
   return (
@@ -148,7 +164,6 @@ export default function ServicesGrid() {
           <div className="w-[1.5vw] h-[0.2vw] bg-red-600 hidden md:block"></div>
         </div>
         
-        {/* ক্লাসি পিল (Pill) লেআউট */}
         <div className="flex flex-wrap justify-center gap-[3vw] md:gap-[1.5vw] max-w-[90vw] md:max-w-[70vw]">
           {industries.map((industry, index) => (
             <div 
@@ -156,6 +171,27 @@ export default function ServicesGrid() {
               className="border border-white/20 px-[5vw] py-[1.5vh] md:px-[2.5vw] md:py-[1vh] rounded-full text-gray-300 text-[3vw] md:text-[0.85vw] uppercase tracking-wider hover:border-red-600 hover:text-white hover:bg-red-600/10 transition-colors cursor-default"
             >
               {industry}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="mt-[8vh] flex flex-col items-center">
+        <div className="flex items-center gap-[1vw] mb-[4vh]">
+          <div className="w-[1.5vw] h-[0.2vw] bg-red-600 hidden md:block"></div>
+          <h3 className="text-white text-[4vw] md:text-[1.2vw] tracking-[0.2em] uppercase font-bold text-center">
+            Areas We Serve
+          </h3>
+          <div className="w-[1.5vw] h-[0.2vw] bg-red-600 hidden md:block"></div>
+        </div>
+
+        <div className="flex flex-wrap justify-center gap-[3vw] md:gap-[1.5vw] max-w-[90vw] md:max-w-[70vw]">
+          {areas.map((area, index) => (
+            <div
+              key={index}
+              className="border border-white/20 px-[5vw] py-[1.5vh] md:px-[2.5vw] md:py-[1vh] rounded-full text-gray-300 text-[3vw] md:text-[0.85vw] uppercase tracking-wider hover:border-red-600 hover:text-white hover:bg-red-600/10 transition-colors cursor-default"
+            >
+              {area}
             </div>
           ))}
         </div>

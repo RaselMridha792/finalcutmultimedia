@@ -29,8 +29,8 @@ export default function VideoGallery() {
     },
     { 
       id: 2, 
-      title: "REAL ESTATE CINEMATIC", 
-      location: "LOS ANGELES", 
+      title: "BRAND STORYTELLING", 
+      location: "CHARLOTTE, NC", 
       url: "https://player.vimeo.com/video/817227760?h=ed3ad73e11",
       thumbnail: "https://finalcutmultimedia.com/wp-content/uploads/2025/10/professional-video-production-for-car-dealers-1-768x439-1.jpeg"
     },
