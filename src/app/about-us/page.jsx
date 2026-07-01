@@ -43,32 +43,36 @@ export default function AboutPage() {
       </section>
 
       <section className="bg-[#0a0a0a] px-6 py-20">
-        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
-          <div className="space-y-6 rounded border border-white/10 bg-[#111111] p-8">
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-red-500">Our story</p>
-            <h2 className="text-3xl font-black uppercase leading-tight sm:text-4xl">
-              We believe great video content should do more than look impressive.
-            </h2>
-            <p className="text-base leading-8 text-gray-400">
-              It should communicate clearly, build trust, strengthen your brand, and support your business goals.
-            </p>
+        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-stretch">
+          <div className="flex h-full flex-col justify-between rounded border border-white/10 bg-[#111111] p-8">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-red-500">Our story</p>
+              <h2 className="text-3xl font-black uppercase leading-tight sm:text-4xl">
+                We believe great video content should do more than look impressive.
+              </h2>
+              <p className="text-base leading-8 text-gray-400">
+                It should communicate clearly, build trust, strengthen your brand, and support your business goals.
+              </p>
+            </div>
           </div>
 
-          <div className="rounded border border-white/10 bg-[#111111] p-8">
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-red-500">Who we work with</p>
-            <p className="mt-4 text-base leading-8 text-gray-400">
-              We partner with businesses, organizations, agencies, and nonprofits to create professional video and photography content that helps them connect with their audience and stand out in a competitive market.
-            </p>
-            <p className="mt-4 text-base leading-8 text-gray-400">
-              From promotional videos and corporate events to recurring content creation and post-production, we manage the creative process from planning to final delivery.
-            </p>
+          <div className="flex h-full flex-col justify-between rounded border border-white/10 bg-[#111111] p-8">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-red-500">Who we work with</p>
+              <p className="mt-4 text-base leading-8 text-gray-400">
+                We partner with businesses, organizations, agencies, and nonprofits to create professional video and photography content that helps them connect with their audience and stand out in a competitive market.
+              </p>
+              <p className="mt-4 text-base leading-8 text-gray-400">
+                From promotional videos and corporate events to recurring content creation and post-production, we manage the creative process from planning to final delivery.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="bg-[#060606] px-6 py-20">
-        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-          <div className="overflow-hidden rounded border border-white/10 bg-[#111111]">
+        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch">
+          <div className="h-full min-h-[420px] overflow-hidden rounded border border-white/10 bg-[#111111]">
             <img
               src="https://res.cloudinary.com/dsga4gyw9/image/upload/v1781697016/Use_this_picture_k9euqa.jpg"
               alt="Final Cut Multimedia creative team"
