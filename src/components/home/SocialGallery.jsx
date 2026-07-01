@@ -49,8 +49,8 @@ export default function SocialGallery() {
           </p>
         </div>
 
-        {/* ডান দিকের সোশ্যাল আইকন (গোল্ডের বদলে রেড কালার) */}
-        <div className="flex gap-[3vw] md:gap-[1.5vw] text-red-600">
+        {/* ডান দিকের সোশ্যাল আইকন (রেড কালার) */}
+        <div className="flex gap-[3vw] md:gap-[1.5vw] text-red-600 md:ml-auto">
           {/* Facebook */}
           <a href="#" className="hover:text-black transition-colors">
             <svg className="w-[6vw] h-[6vw] md:w-[1.5vw] md:h-[1.5vw]" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.408.593 24 1.325 24h11.494v-9.294H9.689v-3.621h3.13V8.411c0-3.1 1.894-4.785 4.659-4.785 1.325 0 2.464.097 2.796.141v3.24l-1.917.001c-1.504 0-1.796.715-1.796 1.763v2.309h3.59l-.467 3.621h-3.123V24h6.126c.732 0 1.325-.592 1.325-1.324V1.325C24 .593 23.408 0 22.675 0z"/></svg>

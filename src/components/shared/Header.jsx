@@ -30,40 +30,16 @@ export default function Header() {
   // ক্লায়েন্টের ওয়েবসাইটের হুবহু মেনু ডাটা
   const menuItems = [
     { label: "HOME", href: "/" },
-    { label: "VIDEO PRODUCTION COMPANY IN CHARLOTTE NC", href: "video-production-company-charlotte-nc" },
     {
       label: "OUR SERVICES",
       href: "/our-services",
       subMenuItems: [
-        { label: "Drone Video Production in Charlotte, NC", href: "our-services/drone-video-production-in-charlotte-nc" },
+        { label: "Event Coverage", href: "/our-services/event-coverage-page" },
+        { label: "Video Production", href: "/video-production-company-charlotte-nc" },
         { label: "Photography", href: "/our-services/photography-services-charlotte-nc" },
-        { label: "Event Coverage Page", href: "/our-services/event-coverage-page" },
         { label: "Video Editing", href: "/our-services/video-editing" },
-        { label: "Monthly Content Creation", href: "/our-services/monthly-content-creation" },
+        { label: "Monthly Social Media Content", href: "/our-services/monthly-content-creation" },
         { label: "Additional Production Services", href: "/our-services/additional-production-services" },
-        { label: "Event photography & Video", href: "#" },
-        { label: "Headshot Photography", href: "#" },
-        { label: "Video Production", href: "#" },
-        { label: "Video Editing in Charlotte NC", href: "#" },
-        { label: "Corporate Video Production", href: "#" },
-        { label: "Car Dealership Videos", href: "#" },
-        { label: "Content for Social Media", href: "#" },
-        { label: "Safety and Training Videos", href: "#" },
-        { label: "Live Stream Service in Charlotte NC", href: "#" },
-        { label: "Documentary Video Production", href: "#" },
-      ],
-    },
-    {
-      label: "AREAS WE SERVE",
-      href: "#",
-      subMenuItems: [
-        { label: "Charlotte Video Company", href: "#" },
-        { label: "Gastonia Video Company", href: "#" },
-        { label: "Kannapolis Video Company", href: "#" },
-        { label: "Concord Video Company", href: "#" },
-        { label: "Huntersville Video Company", href: "#" },
-        { label: "Mooresville Video Company", href: "#" },
-        { label: "Rock Hill Video Company", href: "#" },
       ],
     },
     { label: "BLOGS", href: "#" },
@@ -186,20 +162,20 @@ export default function Header() {
               <Link
                 href={item.href}
                 onClick={() => !item.subMenuItems && setIsMobileMenuOpen(false)}
-                className="text-white text-lg font-bold tracking-widest uppercase hover:text-[#D4AF37]"
+                className="text-white text-lg font-bold tracking-widest uppercase hover:text-red-600"
               >
                 {item.label}
               </Link>
               
               {/* মোবাইলের জন্য সাব-মেনু */}
               {item.subMenuItems && (
-                <div className="flex flex-col gap-4 pl-4 border-l-2 border-[#D4AF37] mt-2">
+                <div className="flex flex-col gap-4 pl-4 border-l-2 border-red-600 mt-2">
                   {item.subMenuItems.map((subItem, subIndex) => (
                     <Link
                       key={subIndex}
                       href={subItem.href}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="text-white/70 text-xs tracking-wider uppercase hover:text-[#D4AF37]"
+                      className="text-white/70 text-xs tracking-wider uppercase hover:text-red-600"
                     >
                       {subItem.label}
                     </Link>
