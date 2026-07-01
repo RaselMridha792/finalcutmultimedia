@@ -80,7 +80,7 @@ export default function SocialGallery() {
                     src={imgSrc}
                     alt={`Gallery Image ${imgIndex}`}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                     unoptimized
                   />
                   {/* হোভার করলে ইন্সটাগ্রামের মতো হালকা ডার্ক ওভারলে */}
@@ -99,7 +99,7 @@ export default function SocialGallery() {
           src="https://finalcutmultimedia.com/wp-content/uploads/2025/10/Untitled-3.jpg"
           alt="Final Cut Multimedia Bottom Banner"
           fill
-          className="object-cover transition-transform duration-700 group-hover:scale-105"
+          className="object-cover transition-transform duration-700 group-hover:scale-[1.02]"
           unoptimized
         />
         <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500"></div>

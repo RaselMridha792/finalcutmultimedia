@@ -27,7 +27,6 @@ export default function Header() {
     }
   };
 
-  // ক্লায়েন্টের ওয়েবসাইটের হুবহু মেনু ডাটা
   const menuItems = [
     { label: "HOME", href: "/" },
     {
@@ -44,23 +43,15 @@ export default function Header() {
     },
     { label: "BLOGS", href: "#" },
     { label: "CONTACT US", href: "/contact" },
-    {
-      label: "ABOUT US",
-      href: "/about-us",
-      subMenuItems: [
-        { label: "FAQs", href: "#" },
-        { label: "Privacy Policy", href: "#" },
-        { label: "Gallery", href: "#" },
-      ],
-    },
+    { label: "Gallery", href: "#" },
+    { label: "ABOUT US", href: "/about-us" },
   ];
 
   return (
     <>
       <header className={`w-full z-50 ${getHeaderClasses()}`}>
         <div className="max-w-[95%] mx-auto flex items-center justify-between">
-          
-          {/* লোগো */}
+
           <Link href="/" className="flex items-center gap-3">
             <div className="relative w-12 h-12 md:w-14 md:h-14">
               <Image
@@ -71,18 +62,18 @@ export default function Header() {
                 priority
               />
             </div>
-            
-           <div className="flex flex-col justify-center">
-  <span className="text-white text-base md:text-lg font-bold leading-none tracking-wide whitespace-nowrap">
-    FINAL CUT
-  </span>
-  <span className="text-white text-[9px] md:text-[10px] tracking-[0.2em] leading-none mt-1 whitespace-nowrap">
-    MULTIMEDIA
-  </span>
-</div>
+
+            <div className="flex flex-col justify-center">
+              <span className="text-white text-base md:text-lg font-bold leading-none tracking-wide whitespace-nowrap">
+                FINAL CUT
+              </span>
+              <span className="text-white text-[9px] md:text-[10px] tracking-[0.2em] leading-none mt-1 whitespace-nowrap">
+                MULTIMEDIA
+              </span>
+            </div>
           </Link>
 
-    
+
           <nav className="hidden xl:flex items-center gap-5 2xl:gap-7">
             {menuItems.map((item, index) => (
               <div key={index} className="relative group py-4">
@@ -98,18 +89,17 @@ export default function Header() {
                   )}
                 </Link>
 
-                {/* সাব-মেনু */}
+
                 {item.subMenuItems && (
-                  <div 
-                    // শেষের আইটেম হলে right-0 হবে, নাহলে left-0 হবে
-                    className={`absolute top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ${
-                      index === menuItems.length - 1 ? "right-0" : "left-0"
-                    }`}
+                  <div
+
+                    className={`absolute top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ${index === menuItems.length - 1 ? "right-0" : "left-0"
+                      }`}
                   >
                     <div className="bg-[#0f0f0f] relative pl-6 pr-8 py-6 flex flex-col gap-5 min-w-[280px]">
-                      {/* সোনালী বর্ডার লাইন */}
+
                       <div className="absolute left-6 top-6 bottom-6 w-[2px] bg-red-600"></div>
-                      
+
                       {item.subMenuItems.map((subItem, subIndex) => (
                         <Link
                           key={subIndex}
@@ -126,8 +116,7 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* মোবাইল মেনু বাটন */}
-          <button 
+          <button
             onClick={() => setIsMobileMenuOpen(true)}
             className="xl:hidden text-white flex items-center gap-2 hover:text-red-600 transition-colors"
           >
@@ -140,13 +129,11 @@ export default function Header() {
         </div>
       </header>
 
-      {/* মোবাইল ফুল-স্ক্রিন মেনু */}
-      <div 
-        className={`fixed inset-0 bg-[#0A0A0A] z-[60] overflow-y-auto px-6 py-10 transition-all duration-500 ease-in-out ${
-          isMobileMenuOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-8"
-        }`}
+      <div
+        className={`fixed inset-0 bg-[#0A0A0A] z-[60] overflow-y-auto px-6 py-10 transition-all duration-500 ease-in-out ${isMobileMenuOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-8"
+          }`}
       >
-        <button 
+        <button
           onClick={() => setIsMobileMenuOpen(false)}
           className="absolute top-6 right-6 text-white flex items-center gap-2 hover:text-red-600"
         >
@@ -166,8 +153,7 @@ export default function Header() {
               >
                 {item.label}
               </Link>
-              
-              {/* মোবাইলের জন্য সাব-মেনু */}
+
               {item.subMenuItems && (
                 <div className="flex flex-col gap-4 pl-4 border-l-2 border-red-600 mt-2">
                   {item.subMenuItems.map((subItem, subIndex) => (

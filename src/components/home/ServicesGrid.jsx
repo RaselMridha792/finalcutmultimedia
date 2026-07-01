@@ -111,7 +111,7 @@ export default function ServicesGrid() {
               src={item.image}
               alt={item.title}
               fill
-              className="object-cover grayscale group-hover:grayscale-0 transition-all duration-[800ms] ease-in-out group-hover:scale-105"
+              className="object-cover grayscale group-hover:grayscale-0 transition-all duration-[800ms] ease-in-out group-hover:scale-[1.02]"
               unoptimized
             />
 

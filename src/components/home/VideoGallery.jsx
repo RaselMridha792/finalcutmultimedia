@@ -162,7 +162,7 @@ export default function VideoGallery() {
                 src={video.thumbnail} 
                 alt={video.title}
                 fill
-                className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-[800ms] ease-out"
+                className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-[1.02] transition-transform duration-[800ms] ease-out"
                 unoptimized
               />
 

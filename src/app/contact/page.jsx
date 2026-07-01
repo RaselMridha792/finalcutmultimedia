@@ -4,13 +4,14 @@ import React from 'react';
 export default function ContactPage() {
   const expectations = [
     { title: '15-minute consultation', text: 'A focused introduction to your goals, budget, and timeline.' },
-    { title: 'Discuss your goals', text: 'We’ll align on the message, audience, and creative direction.' },
+    { title: 'Discuss your goals and budget', text: 'We’ll align on the message, audience, and creative direction.' },
     { title: 'Review creative ideas', text: 'Together we’ll shape the production approach and visual strategy.' },
-    { title: 'No pressure, no obligation', text: 'You’ll leave with clear next steps and thoughtful recommendations.' },
+    { title: 'Receive recommendations', text: 'You’ll leave with clear next steps and thoughtful, no-pressure recommendations.' },
   ];
 
   return (
     <main className="min-h-screen bg-[#060606] text-white">
+      {/* Hero Section */}
       <section className="relative flex min-h-[72vh] items-center overflow-hidden">
         <div className="absolute inset-0">
           <img
@@ -40,16 +41,22 @@ export default function ContactPage() {
         </div>
       </section>
 
+      {/* Main Intro & Photo Section */}
       <section className="bg-[#0a0a0a] px-6 py-20">
-        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
-          <div className="space-y-6">
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-red-500">Ready to talk?</p>
-            <h2 className="text-3xl font-black uppercase leading-tight sm:text-4xl">
-              Tell us about your goals and we&apos;ll guide you through the next steps.
-            </h2>
-            <p className="text-base leading-8 text-gray-400">
-              We&apos;ll discuss your vision, answer your questions, and recommend the best production approach based on your needs. No matter where you are in the planning process, we&apos;d love to hear about your project.
-            </p>
+        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2 lg:items-center">
+          
+          {/* বাম পাশ: কন্টেন্ট */}
+          <div className="space-y-6 flex flex-col justify-center">
+            <div className="space-y-6">
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-red-500">Ready to talk?</p>
+              <h2 className="text-3xl font-black uppercase leading-tight sm:text-4xl">
+                Tell us about your goals, and our team will guide you through the next steps.
+              </h2>
+              <p className="text-base leading-8 text-gray-400">
+                We&apos;ll discuss your vision, answer your questions, and recommend the best production approach based on your needs. No matter where you are in the planning process, we&apos;d love to hear about your project.
+              </p>
+            </div>
+            
             <div className="rounded border border-white/10 bg-[#111111] p-6">
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-white">What happens next</p>
               <p className="mt-3 text-sm leading-7 text-gray-400">
@@ -58,16 +65,19 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="overflow-hidden rounded border border-white/10 bg-[#111111]">
+          {/* ডান পাশ: ইমেজ কন্টেইনার (কোনো ব্যাকগ্রাউন্ড বা ফিক্সড বর্ডার ছাড়া যাতে ছবি না কাটে) */}
+          <div className="w-full flex items-center justify-center">
             <img
               src="https://res.cloudinary.com/dsga4gyw9/image/upload/v1781697016/Use_this_picture_k9euqa.jpg"
               alt="Tyrell Scott and Jane of Final Cut Multimedia"
-              className="h-full w-full object-cover"
+              className="w-full h-auto object-contain rounded border border-white/10"
             />
           </div>
+
         </div>
       </section>
 
+      {/* What to Expect Section */}
       <section className="bg-[#060606] px-6 py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 flex flex-col gap-3 border-l-4 border-red-600 pl-5">
@@ -77,15 +87,18 @@ export default function ContactPage() {
 
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {expectations.map((item) => (
-              <div key={item.title} className="rounded border border-white/10 bg-[#0a0a0a] p-6">
-                <h3 className="text-lg font-semibold uppercase tracking-[0.2em] text-white">{item.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-gray-400">{item.text}</p>
+              <div key={item.title} className="flex flex-col justify-between rounded border border-white/10 bg-[#0a0a0a] p-6">
+                <div>
+                  <h3 className="text-lg font-semibold uppercase tracking-[0.15em] text-white leading-snug">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-gray-400">{item.text}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* Form / Get Started Section */}
       <section className="border-t border-white/10 bg-[#0a0a0a] px-6 py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-8 max-w-3xl">

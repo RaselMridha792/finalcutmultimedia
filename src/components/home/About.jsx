@@ -1,14 +1,13 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function AboutSection() {
   return (
-    <section className="relative w-full flex flex-col lg:flex-row bg-[#0A0A0A] overflow-hidden">
+    <section className="relative w-full grid grid-cols-1 lg:grid-cols-2 bg-[#0A0A0A] overflow-hidden lg:items-center py-12 lg:py-20">
       
-      {/* বাম পাশ: কন্টেন্ট এবং ওয়াটারমার্ক লোগো */}
-      <div className="relative w-full lg:w-1/2 flex flex-col justify-center px-[6vw] py-[10vh] lg:px-[8vw] xl:px-[10vw] z-10 min-h-[50vh] lg:min-h-screen">
+      <div className="relative w-full flex flex-col justify-center px-6 py-8 sm:px-12 lg:px-16 xl:px-24 z-10">
         
-        {/* ব্যাকগ্রাউন্ড লোগো (ওয়াটারমার্ক ইফেক্ট) */}
         <div className="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-1/4 w-[120%] h-[120%] opacity-[0.03] pointer-events-none z-0">
           <Image
             src="https://finalcutmultimedia.com/wp-content/uploads/2025/10/FINALCUT-LOGO-23582.png"
@@ -19,22 +18,22 @@ export default function AboutSection() {
           />
         </div>
 
-        {/* মূল কন্টেন্ট (টেক্সট এবং বাটন) */}
-        <div className="relative z-10">
-          <span className="text-gray-400 text-[3.5vw] md:text-[1vw] tracking-[0.2em] uppercase font-medium">
-            About Us
-          </span>
-          
-          <div className="flex items-center gap-[1.5vw] mt-[2vh] mb-[5vh] md:mb-[6vh]">
-            {/* সোনালী লাইনের বদলে লাল লাইন */}
-            <div className="w-[0.8vw] md:w-[0.2vw] h-[5vh] bg-red-600"></div>
-            <h2 className="text-white text-[8vw] md:text-[4vw] xl:text-[3.5vw] font-bold tracking-wide uppercase leading-tight">
-              Final Cut <br className="hidden lg:block xl:hidden" /> Multimedia
-            </h2>
+        <div className="relative z-10 space-y-6">
+          <div>
+            <span className="text-gray-400 text-xs sm:text-sm tracking-[0.3em] uppercase font-semibold">
+              About Us
+            </span>
+            
+            <div className="flex items-stretch gap-4 mt-3">
+              
+              <div className="w-1 bg-red-600 my-1"></div>
+              <h2 className="text-white text-3xl sm:text-4xl xl:text-5xl font-black tracking-wide uppercase leading-tight">
+                Final Cut <br /> Multimedia
+              </h2>
+            </div>
           </div>
 
-          {/* প্যারাগ্রাফ টেক্সট (ক্লায়েন্টের নতুন রিকোয়ারমেন্ট অনুযায়ী) */}
-          <div className="space-y-[3vh] text-[#A0A0A0] text-[4vw] md:text-[1.1vw] leading-relaxed font-light pr-0 xl:pr-[3vw]">
+          <div className="space-y-4 text-gray-400 text-sm sm:text-base leading-relaxed max-w-xl">
             <p>
               Final Cut Multimedia is a Charlotte based video production agency helping businesses, brands, and organizations create professional video content that supports real business goals. We specialize in corporate videos, commercials, event coverage, customer testimonials, training videos, and brand storytelling that engage audiences and elevate brands.
             </p>
@@ -43,30 +42,30 @@ export default function AboutSection() {
             </p>
           </div>
 
-          {/* Learn More বাটন */}
-          <Link 
-            href="/about-us" 
-            className="inline-flex items-center justify-center mt-[6vh] 
-                       w-[50vw] sm:w-[30vw] md:w-[22vw] lg:w-[16vw] xl:w-[14vw]
-                       h-[7vh] md:h-[6vh]
-                       border-[0.2vw] md:border-[0.1vw] border-white/50 text-white text-[3.5vw] md:text-[0.9vw] font-semibold tracking-[0.2em] uppercase 
-                       transition-all duration-300 hover:bg-white hover:text-black hover:border-white"
-          >
-            Learn More
-          </Link>
+          <div className="pt-4">
+            <Link 
+              href="/about-us" 
+              className="inline-flex items-center justify-center px-8 py-3
+                         border border-white/30 text-white text-xs sm:text-sm font-bold tracking-[0.2em] uppercase 
+                         transition-all duration-300 hover:bg-white hover:text-black hover:border-white"
+            >
+              Learn More
+            </Link>
+          </div>
         </div>
       </div>
 
-      {/* ডান পাশ: ক্লায়েন্টের ছবি */}
-      <div className="relative w-full lg:w-[45%] xl:w-[42%] h-[60vh] lg:h-auto lg:min-h-screen bg-black/5">
-        <Image
-          src="https://res.cloudinary.com/dsga4gyw9/image/upload/v1781697016/Use_this_picture_k9euqa.jpg"
-          alt="Final Cut Multimedia Team"
-          fill
-          className="object-cover object-center"
-          priority
-          unoptimized
-        />
+      <div className="w-full h-auto px-6 lg:px-8 xl:px-12 flex items-center justify-center">
+        <div className="relative w-full aspect-[16/10] max-h-[550px]">
+          <Image
+            src="https://res.cloudinary.com/dsga4gyw9/image/upload/v1781697016/Use_this_picture_k9euqa.jpg"
+            alt="Final Cut Multimedia Team"
+            fill
+            className="object-contain"
+            priority
+            unoptimized
+          />
+        </div>
       </div>
 
     </section>

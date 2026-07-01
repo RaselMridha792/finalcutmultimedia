@@ -8,22 +8,20 @@ export default function Footer() {
     { name: "HOME", url: "/" },
     { name: "VIDEO PRODUCTION AGENCY", url: "/video-production-company-charlotte-nc" },
     { name: "ABOUT US", url: "/about-us" },
-    { name: "FAQ'S", url: "#" },
-    { name: "BLOGS", url: "#" },
+    { name: "FAQ'S", url: "/faq" },
   ];
 
   const services = [
-    { name: "EDITING", url: "#" },
-    { name: "PHOTOGRAPHY", url: "#" },
-    { name: "VIDEO PRODUCTION", url: "#" },
-    { name: "CORPORATE EVENTS", url: "#" },
-    { name: "CAR DEALERSHIP VIDEOS", url: "#" },
+    { name: "EDITING", url: "/our-services/video-editing" },
+    { name: "PHOTOGRAPHY", url: "/our-services/photography-services-charlotte-nc" },
+    { name: "VIDEO PRODUCTION", url: "/video-production-company-charlotte-nc" },
+    { name: "CORPORATE EVENTS", url: "/our-services/event-coverage-page" },
+    { name: "ADDITIONAL PRODUCTION", url: "/our-services/additional-production-services" },
   ];
 
   return (
     <footer className="relative w-full bg-[#0A0A0A] pt-[12vh] pb-[4vh] border-t-[0.1vw] border-white/10 overflow-hidden">
       
-      {/* ফুটার ব্যাকগ্রাউন্ড লোগো ওয়াটারমার্ক (Watermark) */}
       <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] pointer-events-none z-0">
         <div className="relative w-[120vw] h-[120vh] md:w-[60vw] md:h-[60vh]">
           <Image
@@ -38,13 +36,10 @@ export default function Footer() {
 
       <div className="relative z-10 w-full max-w-[90vw] mx-auto flex flex-col">
         
-        {/* ক্লায়েন্টের প্রাক-ফুটার (Pre-footer) টেক্সট */}
        
 
-        {/* ৪-কলাম ফুটার গ্রিড */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-[8vw] md:gap-[4vw] mb-[8vh]">
           
-          {/* কলাম ১: About Company */}
           <div className="flex flex-col">
             <div className="relative w-[15vw] h-[10vh] md:w-[6vw] md:h-[6vh] mb-[3vh]">
               <Image
@@ -63,7 +58,6 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* কলাম ২: Useful Pages */}
           <div className="flex flex-col">
             <h3 className="text-white text-[4.5vw] md:text-[1.2vw] font-bold uppercase tracking-widest mb-[3vh]">
               QUICK LINKS
@@ -79,7 +73,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* কলাম ৩: Services */}
           <div className="flex flex-col">
             <h3 className="text-white text-[4.5vw] md:text-[1.2vw] font-bold uppercase tracking-widest mb-[3vh]">
               SERVICES
@@ -95,7 +88,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* কলাম ৪: Contact Me & Privacy */}
           <div className="flex flex-col">
             <h3 className="text-white text-[4.5vw] md:text-[1.2vw] font-bold uppercase tracking-widest mb-[3vh]">
               CONTACT US
@@ -111,14 +103,13 @@ export default function Footer() {
               </a>
             </div>
             
-            <Link href="#" className="text-white text-[4vw] md:text-[1.1vw] font-bold hover:text-red-600 transition-colors">
+            <Link href="/privacy-policy" className="text-white text-[4vw] md:text-[1.1vw] font-bold hover:text-red-600 transition-colors">
               Privacy Policy
             </Link>
           </div>
 
         </div>
 
-        {/* কপিরাইট বটম বার */}
         <div className="w-full flex flex-col md:flex-row items-center justify-center text-center pt-[4vh] border-t-[0.1vw] border-white/10">
           <p className="text-gray-500 text-[3vw] md:text-[0.8vw] tracking-wider uppercase">
             © 2026 All Rights Reserved. Design & Develop By Final Cut Multimedia

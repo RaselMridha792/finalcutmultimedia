@@ -74,7 +74,7 @@ export default function RecentPostsSection() {
                   src={post.image}
                   alt={post.title}
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="object-cover transition-transform duration-700 group-hover:scale-[1.02]"
                   unoptimized
                 />
               </div>
